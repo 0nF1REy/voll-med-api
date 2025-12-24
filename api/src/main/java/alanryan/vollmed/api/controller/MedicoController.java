@@ -1,9 +1,6 @@
 package alanryan.vollmed.api.controller;
 
-import alanryan.vollmed.api.medico.DadosCadastroMedico;
-import alanryan.vollmed.api.medico.DadosListagemMedico;
-import alanryan.vollmed.api.medico.Medico;
-import alanryan.vollmed.api.medico.MedicoRepository;
+import alanryan.vollmed.api.medico.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -28,5 +25,12 @@ public class MedicoController {
     @GetMapping
     public Page<DadosListagemMedico> listar(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao) {
         return repository.findAll(paginacao).map(DadosListagemMedico::new);
+    }
+
+    @PutMapping
+    @Transactional
+    public void atualizar(@RequestBody @Valid DadosAtualizacaoMedico dados) {
+        var medico = repository.getReferenceById(dados.id());
+        medico.atualizarInformacoes(dados);
     }
 }
