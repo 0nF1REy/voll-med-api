@@ -1,4 +1,4 @@
-package alanryan.vollmed.api.medico;
+package alanryan.vollmed.api.domain.medico;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

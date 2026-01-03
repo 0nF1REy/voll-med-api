@@ -1,4 +1,4 @@
-package alanryan.vollmed.api.medico;
+package alanryan.vollmed.api.domain.medico;
 
 public enum Especialidade {
     ORTOPEDIA,
