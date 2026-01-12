@@ -109,7 +109,7 @@ As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do proj
 
 ## 👤 Sobre o Desenvolvedor <a name="sobre-o-desenvolvedor"></a>
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
         <br>
